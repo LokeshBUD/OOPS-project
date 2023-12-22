@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="630.0" prefWidth="710.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.MainController">
+    <top>
+        <AnchorPane prefHeight="57.0" prefWidth="463.0" style="-fx-background-color: #3477eb;" BorderPane.alignment="CENTER">
+            <children>
+                <ImageView fitHeight="39.0" fitWidth="39.0" layoutX="554.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="7.0">
+                    <image>
+                        <Image url="@Screenshot_2023-12-09_at_8.31.33_PM-removebg-preview.png" />
+                    </image>
+                </ImageView>
+            <Button layoutX="762.0" layoutY="5.0" minWidth="53.0" mnemonicParsing="false" onAction="#changeToProfile" opacity="0.0" prefHeight="54.0" prefWidth="53.0" text="Button" AnchorPane.bottomAnchor="3.0" AnchorPane.rightAnchor="0.0" />
+            <Button layoutX="14.0" layoutY="13.0" mnemonicParsing="false" onAction="#refresh" text="Refresh" />
+            <Label layoutX="119.0" layoutY="17.0" prefHeight="22.0" prefWidth="61.0" text="Hello!">
+               <font>
+                  <Font name="American Typewriter" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="intro" layoutX="189.0" layoutY="20.0" prefHeight="18.0" prefWidth="120.0" underline="true">
+               <font>
+                  <Font name="American Typewriter" size="14.0" />
+               </font>
+            </Label>
+
+            </children>
+        </AnchorPane>
+    </top>
+   <center>
+      <AnchorPane prefHeight="598.0" prefWidth="598.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="52.0" fitWidth="59.0" layoutX="280.0" layoutY="417.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="19.0">
+               <image>
+                  <Image url="@pngtree-vector-plus-icon-png-image_4225174-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="282.0" layoutY="438.0" mnemonicParsing="false" onAction="#onchangeToPost" opacity="0.0" prefHeight="53.0" prefWidth="60.0" text="Button" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="15.0" />
+            <Label fx:id="Ltitle" layoutX="14.0" layoutY="14.0" prefHeight="18.0" prefWidth="427.0" text="Select a post to view" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0">
+               <font>
+                  <Font size="24.0" />
+               </font></Label>
+            <Label fx:id="LContent" alignment="TOP_LEFT" layoutX="12.0" layoutY="48.0" prefHeight="476.0" prefWidth="490.0" text="select post to view content">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </center>
+   <left>
+      <VBox prefHeight="643.0" prefWidth="156.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label prefHeight="23.0" prefWidth="148.0" text="Posts by everyone:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+              <ListView fx:id="posts" prefHeight="625.0" prefWidth="230.0" />
+         </children>
+      </VBox>
+   </left>
+
+</BorderPane>
